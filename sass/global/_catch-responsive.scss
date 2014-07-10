@@ -1,0 +1,32 @@
+/*=========================
+* Catch responsive mixins *
+=========================*/
+
+$break-tablet: $site-width;
+$break-mobile: 767px; // Default 767px
+$break-large: 1200px; // Default 1200px
+
+@mixin media($media, $persist: false) {
+
+	@if $media == "tablet" and $persist == false {
+		@media only screen and (max-width: $break-tablet) and (min-width: $break-mobile + 1) {
+			@content;
+		}
+	} @else if $media == "tablet" and $persist == true {
+		@media only screen and (max-width: $break-tablet) {
+			@content;
+		}
+	}
+
+	@if $media == "mobile" {
+		@media only screen and (max-width: $break-mobile) {
+			@content;
+		}
+	}
+
+	@if $media == "large-screen" {
+		@media only screen and (min-width: $break-large) {
+			@content;
+		}
+	}
+}

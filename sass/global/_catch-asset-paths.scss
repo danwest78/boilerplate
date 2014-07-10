@@ -1,0 +1,11 @@
+//Asset locations
+$image_path: '/assets/images/';
+$font_path: '/assets/fonts/';
+
+@function image-path($file) {
+  @return $image-path + $file;
+}
+
+@function font-path($file) {
+  @return $font-path + $file;;
+}
