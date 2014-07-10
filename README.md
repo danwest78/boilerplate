@@ -1,4 +1,4 @@
-# Catch Front-End Boilerplate
+# Front-End Boilerplate
 ###Current version: 0.1  
 
 This is a bare bones front-end file structure with boiler plate resets & SASS setup
